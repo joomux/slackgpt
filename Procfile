@@ -1,1 +1,1 @@
-web: python3 slackgpt.py
+web: python3 slackgpt.py -p $PORT
