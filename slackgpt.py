@@ -41,7 +41,7 @@ def handle_message_events(body, logger):
     # Reply to thread 
     response = client.chat_postMessage(channel=body["event"]["channel"], 
                                        thread_ts=body["event"]["event_ts"],
-                                       text=f"{response}")
+                                       text=f"Here you go: \n{response}")
 
 if __name__ == "__main__":
     SocketModeHandler(app, SLACK_APP_TOKEN).start()
