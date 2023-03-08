@@ -22,10 +22,10 @@ def handle_message_events(body, logger):
     # Create prompt for ChatGPT
     prompt = str(body["event"]["text"]).split(">")[1]
     
-    # Let thre user know that we are busy with the request 
-    response = client.chat_postMessage(channel=body["event"]["channel"], 
-                                       thread_ts=body["event"]["event_ts"],
-                                       text=f"Hello from your bot! :robot_face: \nThanks for your request, I'm on it!")
+    # Let the user know that we are busy with the request 
+    # response = client.chat_postMessage(channel=body["event"]["channel"], 
+    #                                    thread_ts=body["event"]["event_ts"],
+    #                                    text=f"Hello from your bot! :robot_face: \nThanks for your request, I'm on it!")
     
     # Check ChatGPT
     openai.api_key = OPENAI_API_KEY
@@ -41,7 +41,7 @@ def handle_message_events(body, logger):
     # Reply to thread 
     response = client.chat_postMessage(channel=body["event"]["channel"], 
                                        thread_ts=body["event"]["event_ts"],
-                                       text=f"Here you go: \n{response}")
+                                       text=f"{response}")
 
 if __name__ == "__main__":
     SocketModeHandler(app, SLACK_APP_TOKEN).start()
