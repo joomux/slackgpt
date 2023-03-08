@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import openai
 from slack_bolt.adapter.socket_mode import SocketModeHandler

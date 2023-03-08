@@ -1,0 +1,6 @@
+{
+    "name": "ChatGPT on Slack",
+    "description": "A WebSockets app to interfact to OpenAI from Slack",
+    "image": "heroku/python",
+    "repository": "https://github.com/joomux/slackgpt"
+  }
